@@ -1,0 +1,177 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.single-blog {
+  padding: 6rem 8rem;
+  text-align: left;
+}
+
+.link-back {
+  font-size: 1.6rem;
+  color: #0266ff;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+}
+
+.single-blog-post-container {
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 5rem;
+}
+
+.single-blog-details {
+  max-width: 410px;
+  width: 96%;
+}
+.s-image {
+  position: sticky;
+  top: 5vh;
+  width: 410px;
+  height: 320px;
+  margin-bottom: -6rem;
+  border-radius: 10px;
+}
+
+.s-author-box {
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.s-title {
+  font-size: 3.6rem;
+  color: #10131c;
+  margin: 2rem auto;
+  line-height: 1;
+  overflow-wrap: break-word;
+}
+
+.s-description {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  overflow-wrap: break-word;
+}
+
+.icon-avatar {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.comment-favorite {
+  gap: 2.5rem;
+}
+
+.s-author,
+.s-date {
+  font-size: 1.2rem;
+  color: #9d9db5;
+}
+
+.leave-comment {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.write-comment {
+  background-color: white;
+  border: 1px solid #c0bfcf;
+  width: 100%;
+  height: 10rem;
+  color: black;
+}
+
+.send-comment {
+  background-color: #0266ff;
+  color: white;
+  padding: 13px 36px;
+  float: right;
+}
+
+.form-comment {
+  margin-bottom: 3rem;
+}
+
+.comments-label {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.commenter,
+.his-her-comment {
+  font-size: 1.4rem;
+  color: #625f87;
+  margin-bottom: 1rem;
+}
+
+.his-her-comment {
+  color: #10131c;
+  margin-bottom: 0rem;
+}
+
+.comment-divider {
+  color: #ebeff8;
+  margin-bottom: 1.8rem;
+}
+
+.s-commenter-data {
+  border-bottom: 1px solid gray;
+  margin-bottom: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show-more {
+  border: 1px solid #0266ff;
+  color: #0266ff;
+  background-color: white;
+  padding: 13px 36px;
+  float: left;
+  border-radius: 40px;
+}
+
+a.balancer {
+  color: #0266ff;
+}
+
+.hide-comments {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem auto;
+}
+/* .fixed-image {
+  position: fixed;
+} */
+
+@media only screen and (max-width: 920px) {
+  .single-blog-post-container {
+    flex-wrap: wrap;
+  }
+
+  .s-image {
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .s-image {
+    width: 93.75%;
+    min-width: 300px;
+    height: 165px;
+    margin: auto;
+    border-radius: 10px;
+    position: static;
+  }
+
+  .single-blog-post-container {
+    gap: 1rem;
+  }
+}

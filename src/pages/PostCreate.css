@@ -1,0 +1,141 @@
+.newpost-container {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new-detail {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.add-portion {
+  width: 90%;
+  margin: auto;
+}
+
+.image-preview {
+  width: 410px;
+  height: 320px;
+}
+
+.add-image-background {
+  border-radius: 10px;
+}
+.btn {
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  height: 35px;
+  font-size: 20px;
+}
+
+.single-blog {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
+.link-back {
+  align-self: flex-start;
+  margin-bottom: 4rem;
+}
+
+.n-label {
+  font-size: 3.6rem;
+  margin-bottom: 6rem;
+}
+
+.n-title,
+.n-text {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.newpost-title,
+.newpost-text {
+  width: 90%;
+  height: 10rem;
+}
+
+.image-preview {
+  background-size: cover;
+}
+
+.post {
+  margin-top: 4rem;
+  padding: 13px 36px;
+  color: white;
+  background: #0266ff;
+  border-radius: 6px;
+}
+
+.inactive {
+  background-color: #c0bfcf;
+  border: transparent;
+  cursor: default;
+}
+
+.add-image-background {
+  background-color: #e0e0e0;
+}
+
+@media only screen and (max-width: 910px) {
+  .App,
+  .route-layout {
+    padding: 0;
+    width: 100vw;
+    margin: auto;
+  }
+  .single-blog {
+    padding: 4rem 0px;
+    width: 93.75%;
+    margin: auto;
+  }
+  .newpost-container {
+    padding: 0;
+    width: 93.75%;
+    margin: auto;
+  }
+
+  .new-detail {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .image-button {
+    padding: 12px 20px;
+  }
+
+  .link-back {
+    margin-bottom: 2rem;
+  }
+
+  .n-label {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+
+  .n-title,
+  .n-text {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .newpost-title,
+  .newpost-text {
+    width: 100%;
+    margin: auto;
+    height: 10rem;
+  }
+
+  .add-image-background,
+  .image-uploader,
+  .image-preview {
+    width: 70%;
+    min-width: 280px;
+    margin: auto;
+    padding: 0px;
+  }
+}
