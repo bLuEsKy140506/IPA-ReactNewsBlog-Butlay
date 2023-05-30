@@ -7,6 +7,7 @@ import "./index.css";
 //this function will set the default value to local storage
 //and to ensure it will not overwrite the existing modified values
 if (localStorage.getItem("track_changes") === null) {
+  window.localStorage.clear();
   datalocal.map((item) => {
     window.localStorage.setItem(item.id, JSON.stringify(item));
   });
