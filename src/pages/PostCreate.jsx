@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { PostImage } from "../components/PostImage";
 import "./PostedBlogDetails.css";
 import "./PostCreate.css";
+import { FaRegWindowClose } from "react-icons/fa";
 
 export default function PostCreate() {
   const [url, setUrl] = useState("");
@@ -76,7 +77,7 @@ export default function PostCreate() {
               <figure className="add-image-background">
                 {url === "" ||
                 url ===
-                  "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930" ? (
+                  "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg" ? (
                   <PostImage addImageSuccessful={handleImageSuccess} />
                 ) : (
                   <img

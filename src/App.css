@@ -94,3 +94,13 @@ textarea {
   top: 40%;
   transform: translate(-50%, -50%);
 }
+
+.item-cross {
+  margin: 5px;
+  background-color: lightcoral;
+  color: white;
+}
+
+.item-cross:hover {
+  background-color: red;
+}

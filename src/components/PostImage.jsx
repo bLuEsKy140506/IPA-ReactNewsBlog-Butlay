@@ -1,7 +1,7 @@
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 import { uploadImage } from "../plugins/uploadImage";
-
+import { FaRegWindowClose } from "react-icons/fa";
 
 export const PostImage = ({ addImageSuccessful }) => {
   // This code sends an API to a 3rd party library that uploads and serves the image
@@ -11,7 +11,6 @@ export const PostImage = ({ addImageSuccessful }) => {
   const imageInput = useRef();
   const [image, setImage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
 
   const handleImageUpload = async (e) => {
     try {
@@ -23,6 +22,13 @@ export const PostImage = ({ addImageSuccessful }) => {
       addImageSuccessful(fileUrl);
     } catch (e) {
       console.warn(`Error: ${e}`);
+      alert(`${e}`);
+      setImage(
+        "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
+      );
+      addImageSuccessful(
+        "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
+      );
     }
     setIsLoading(false);
   };
@@ -32,29 +38,43 @@ export const PostImage = ({ addImageSuccessful }) => {
   };
 
   return (
-    <div
-      className={"image-uploader"}
-      style={{
-        zIndex: 0,
-        backgroundImage: image ? `url(${image})` : "#f8f9fc",
-        backgroundSize: "cover",
-      }}
-    >
-      {isLoading ? <LoadingSpinner /> : ""}
-      <label
-        className="image-button"
+    <div>
+      {image ===
+        "https://st3.depositphotos.com/23594922/31822/v/450/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg" && (
+        <FaRegWindowClose
+          size={30}
+          className="item-cross"
+          onClick={() => {
+            setImage("");
+            addImageSuccessful("");
+          }}
+        />
+      )}
+
+      <div
+        className="image-uploader"
         style={{
-          display: image ? "none" : "block",
+          zIndex: 0,
+          backgroundImage: image === "" ? "#f8f9fc" : `url(${image})`,
+          backgroundSize: "cover",
         }}
       >
-        <input
-          type="file"
-          name="image_upload"
-          onChange={handleImageUpload}
-          ref={imageInput}
-        />
-        + Add Image
-      </label>
+        {isLoading ? <LoadingSpinner /> : ""}
+        <label
+          className="image-button"
+          style={{
+            display: image ? "none" : "block",
+          }}
+        >
+          <input
+            type="file"
+            name="image_upload"
+            onChange={handleImageUpload}
+            ref={imageInput}
+          />
+          + Upload Image
+        </label>
+      </div>
     </div>
   );
 };
