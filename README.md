@@ -1,4 +1,4 @@
-Live view: [https://ipa-react-news-blog-butlay.vercel.app/](ipa-react-news-blog-butlay.vercel.app)
+Live view: [https://ipa-react-news-blog-butlay.vercel.app/](https://ipa-react-news-blog-butlay.vercel.app)
 
 # IPA-ReactNewsBlog-Butlay
 
